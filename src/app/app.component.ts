@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import response from './services/loader';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'youtube-client-app';
+
+  constructor() {
+    console.log(response);
+    // data=from(data)
+    // this.data.subscribe(console.log);
+  }
 }
