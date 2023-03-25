@@ -12,6 +12,6 @@ export class ResultsListComponent {
   results: ItemType[];
   constructor() {
     this.results = response.items;
-    console.log(this.results);
+    console.log(this.results.map((result) => result.snippet.title));
   }
 }

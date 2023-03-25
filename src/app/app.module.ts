@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+
 import { AppComponent } from './app.component';
 import { UserBlockComponent } from './header/user-block/user-block.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -12,9 +16,7 @@ import { FilteringComponent } from './header/filtering/filtering.component';
 import { ResultsListComponent } from './search-panel/results-list/results-list.component';
 import { ResultItemComponent } from './search-panel/result-item/result-item.component';
 import { FooterDirective } from './search-panel/result-item/footer.directive';
-
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
+import { FilterByWordPipe } from './search-panel/results-list/filtering.pippe';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
     ResultsListComponent,
     ResultItemComponent,
     FooterDirective,
+    FilterByWordPipe,
   ],
   imports: [
     BrowserModule,
