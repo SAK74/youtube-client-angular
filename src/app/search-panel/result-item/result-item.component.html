@@ -8,8 +8,17 @@
   </mat-card-header>
 
   <mat-card-content>
-    <div>statistic line</div>
-    <mat-card-title>Podcast</mat-card-title>
+    <div class="statistics">
+      <mat-icon>remove_red_eye</mat-icon>
+      <span>{{ item.statistics.viewCount }}</span>
+      <mat-icon>favorite</mat-icon>
+      <span>{{ item.statistics.likeCount }}</span>
+      <mat-icon>heart_broken</mat-icon>
+      <span>{{ item.statistics.dislikeCount }}</span>
+      <mat-icon>library_books</mat-icon>
+      <span>{{ item.statistics.commentCount }}</span>
+    </div>
+    <mat-card-title>{{ item.snippet.title }}</mat-card-title>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary">more...</button>
