@@ -7,11 +7,20 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   @Output() searchSubmit = new EventEmitter();
-  showFilter = false;
+  @Output() dateSearch = new EventEmitter();
+  @Output() countSearch = new EventEmitter();
+
+  showFilter = true;
   setClick() {
     this.showFilter = !this.showFilter;
   }
   submitClick() {
     this.searchSubmit.emit();
+  }
+  dateClick() {
+    this.dateSearch.emit();
+  }
+  countClick() {
+    this.countSearch.emit();
   }
 }

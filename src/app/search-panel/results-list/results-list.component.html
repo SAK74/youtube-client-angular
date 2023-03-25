@@ -1,7 +1,12 @@
-<!-- <p>results-list works!</p> -->
-
 <ul>
-  <li *ngFor="let item of results | byWord : 'learn'">
+  <li
+    *ngFor="
+      let item of results
+        | byWord : 'crash' : false
+        | byDate : dateSort
+        | byViews : viewSort
+    "
+  >
     <app-result-item [item]="item"></app-result-item>
   </li>
 </ul>

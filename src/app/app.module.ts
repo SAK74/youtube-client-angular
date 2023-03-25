@@ -16,7 +16,11 @@ import { FilteringComponent } from './header/filtering/filtering.component';
 import { ResultsListComponent } from './search-panel/results-list/results-list.component';
 import { ResultItemComponent } from './search-panel/result-item/result-item.component';
 import { FooterDirective } from './search-panel/result-item/footer.directive';
-import { FilterByWordPipe } from './search-panel/results-list/filtering.pippe';
+import {
+  FilterByDate,
+  FilterByViews,
+  FilterByWordPipe,
+} from './search-panel/results-list/filtering.pippe';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { FilterByWordPipe } from './search-panel/results-list/filtering.pippe';
     ResultItemComponent,
     FooterDirective,
     FilterByWordPipe,
+    FilterByDate,
+    FilterByViews,
   ],
   imports: [
     BrowserModule,

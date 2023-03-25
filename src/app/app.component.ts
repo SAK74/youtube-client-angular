@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import response from './services/loader';
 
+export type SortType = false | 'inc' | 'dec';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,5 +18,14 @@ export class AppComponent {
   }
   handleSearchSubmit() {
     this.showSearch = true;
+  }
+  dateSort: SortType = false;
+  dateSortClick() {
+    this.dateSort = this.dateSort === 'dec' ? 'inc' : 'dec';
+    console.log('date click: ', this.dateSort);
+  }
+  viewSort: SortType = false;
+  viewSortClick() {
+    this.viewSort = this.viewSort === 'dec' ? 'inc' : 'dec';
   }
 }

@@ -1,13 +1,14 @@
-<!-- <p>header works!</p> -->
 <header>
   <div class="main-row">
-    <!-- <div class="search-block"> -->
     <img src="../../../assets/png/logo.png" alt="logo" />
     <app-input-block (onSubmit)="submitClick()"></app-input-block>
     <app-settings (onClick)="setClick()"></app-settings>
-    <!-- </div> -->
 
     <app-user-block></app-user-block>
   </div>
-  <app-filtering *ngIf="showFilter"></app-filtering>
+  <app-filtering
+    *ngIf="showFilter"
+    (dateFilter)="dateClick()"
+    (countFilter)="countClick()"
+  ></app-filtering>
 </header>

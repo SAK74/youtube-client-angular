@@ -1,2 +1,10 @@
-<app-header (searchSubmit)="handleSearchSubmit()"></app-header>
-<app-results-list *ngIf="true"></app-results-list>
+<app-header
+  (searchSubmit)="handleSearchSubmit()"
+  (dateSearch)="dateSortClick()"
+  (countSearch)="viewSortClick()"
+></app-header>
+<app-results-list
+  *ngIf="true"
+  [dateSort]="dateSort"
+  [viewSort]="viewSort"
+></app-results-list>
