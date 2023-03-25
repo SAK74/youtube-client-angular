@@ -8,10 +8,13 @@ import response from './services/loader';
 })
 export class AppComponent {
   title = 'youtube-client-app';
-
+  showSearch = false;
   constructor() {
     console.log(response);
     // data=from(data)
     // this.data.subscribe(console.log);
+  }
+  handleSearchSubmit() {
+    this.showSearch = true;
   }
 }

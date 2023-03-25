@@ -1,1 +1,15 @@
-<p>result-item works!</p>
+<!-- <p>result-item works!</p> -->
+
+<mat-card>
+  <mat-card-header>
+    <img
+      mat-card-md-image
+      [src]="item.snippet.thumbnails.default.url"
+      alt="item-image"
+    />
+  </mat-card-header>
+  <mat-card-subtitle>subt</mat-card-subtitle>
+
+  <mat-card-content></mat-card-content>
+  <mat-card-footer [setFooter]="item.snippet.publishedAt"></mat-card-footer>
+</mat-card>

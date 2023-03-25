@@ -1,1 +1,1 @@
-export { default } from '../../mocked-response.json';
+export { default } from './mocked-response.json';

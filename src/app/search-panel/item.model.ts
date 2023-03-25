@@ -15,24 +15,24 @@ export interface ItemType {
     thumbnails: {
       default: ThumbType;
       medium: ThumbType;
-      hight: ThumbType;
-      standart: ThumbType;
+      high: ThumbType;
+      standard: ThumbType;
       maxres: ThumbType;
     };
     title: string;
-    statistics: Record<
+  };
+  statistics: Record<
     | 'commentCount'
     | 'dislikeCount'
     | 'favoriteCount'
     | 'likeCount'
     | 'viewCount',
     string
-    >;
-  };
+  >;
 }
 
 interface ThumbType {
-  height: number;
   url: string;
   width: number;
+  height: number;
 }

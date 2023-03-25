@@ -1,0 +1,18 @@
+.main-row {
+  display: flex;
+  // display: grid;
+  // grid-template-columns: 83% 17%;
+  position: relative;
+  justify-content: center;
+  gap: 2rem;
+}
+
+app-user-block {
+  position: absolute;
+  right: 20px;
+}
+
+app-filtering {
+  display: flex;
+  justify-content: center;
+}
