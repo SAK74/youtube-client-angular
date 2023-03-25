@@ -8,10 +8,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class FilteringComponent {
   @Output() dateFilter = new EventEmitter();
   @Output() countFilter = new EventEmitter();
+  @Output() filterValueChange = new EventEmitter<string>();
   dateClick() {
     this.dateFilter.emit();
   }
   countClick() {
     this.countFilter.emit();
+  }
+  valueChange(value: string) {
+    this.filterValueChange.emit(value);
   }
 }

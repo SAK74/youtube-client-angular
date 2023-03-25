@@ -4,8 +4,9 @@ import { ItemType } from '../item.model';
 
 @Pipe({ name: 'byWord' })
 export class FilterByWordPipe implements PipeTransform {
-  transform(value: ItemType[], word: string, proceed: boolean) {
-    return !proceed
+  transform(value: ItemType[], word: string) {
+    console.log('pipe: ', word);
+    return !word
       ? value
       : value.filter((item) =>
           item.snippet.title

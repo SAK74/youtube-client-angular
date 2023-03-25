@@ -22,10 +22,13 @@ export class AppComponent {
   dateSort: SortType = false;
   dateSortClick() {
     this.dateSort = this.dateSort === 'dec' ? 'inc' : 'dec';
-    console.log('date click: ', this.dateSort);
   }
   viewSort: SortType = false;
   viewSortClick() {
     this.viewSort = this.viewSort === 'dec' ? 'inc' : 'dec';
+  }
+  filterValue = '';
+  filterValChange(val: string) {
+    this.filterValue = val;
   }
 }

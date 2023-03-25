@@ -2,9 +2,11 @@
   (searchSubmit)="handleSearchSubmit()"
   (dateSearch)="dateSortClick()"
   (countSearch)="viewSortClick()"
+  (filterVal)="filterValChange($event)"
 ></app-header>
 <app-results-list
   *ngIf="true"
   [dateSort]="dateSort"
   [viewSort]="viewSort"
+  [filterWord]="filterValue"
 ></app-results-list>

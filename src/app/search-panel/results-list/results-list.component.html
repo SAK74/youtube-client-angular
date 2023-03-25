@@ -2,7 +2,7 @@
   <li
     *ngFor="
       let item of results
-        | byWord : 'crash' : false
+        | byWord : filterWord
         | byDate : dateSort
         | byViews : viewSort
     "

@@ -9,7 +9,7 @@ export class HeaderComponent {
   @Output() searchSubmit = new EventEmitter();
   @Output() dateSearch = new EventEmitter();
   @Output() countSearch = new EventEmitter();
-
+  @Output() filterVal = new EventEmitter<string>();
   showFilter = true;
   setClick() {
     this.showFilter = !this.showFilter;
@@ -22,5 +22,8 @@ export class HeaderComponent {
   }
   countClick() {
     this.countSearch.emit();
+  }
+  filterValueChange(val: string) {
+    this.filterVal.emit(val);
   }
 }

@@ -10,5 +10,6 @@
     *ngIf="showFilter"
     (dateFilter)="dateClick()"
     (countFilter)="countClick()"
+    (filterValueChange)="filterValueChange($event)"
   ></app-filtering>
 </header>
