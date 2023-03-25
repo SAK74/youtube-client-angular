@@ -1,4 +1,26 @@
 mat-card-footer {
   height: 5px;
-  background-color: red;
+}
+
+mat-card {
+  min-width: 230px;
+  background: #e5e5e5;
+}
+
+mat-card-header {
+  img {
+    width: 100%;
+  }
+}
+
+mat-card-actions {
+  justify-content: center;
+}
+
+mat-card-title {
+  text-align: end;
+}
+
+mat-card-content {
+  text-align: center;
 }

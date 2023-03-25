@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { UserBlockComponent } from './header/user-block/user-block.component';
@@ -22,6 +23,7 @@ import {
   FilterByViews,
   FilterByWordPipe,
 } from './search-panel/results-list/filtering.pippe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import {
     MatCardModule,
     MatIconModule,
     FormsModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

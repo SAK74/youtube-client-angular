@@ -10,7 +10,8 @@ export class HeaderComponent {
   @Output() dateSearch = new EventEmitter();
   @Output() countSearch = new EventEmitter();
   @Output() filterVal = new EventEmitter<string>();
-  showFilter = true;
+
+  showFilter = false;
   setClick() {
     this.showFilter = !this.showFilter;
   }

@@ -5,7 +5,7 @@
   (filterVal)="filterValChange($event)"
 ></app-header>
 <app-results-list
-  *ngIf="true"
+  *ngIf="showSearch"
   [dateSort]="dateSort"
   [viewSort]="viewSort"
   [filterWord]="filterValue"

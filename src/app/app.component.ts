@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'youtube-client-app';
   showSearch = false;
   constructor() {
-    console.log(response);
+    // console.log(response);
     // data=from(data)
     // this.data.subscribe(console.log);
   }
