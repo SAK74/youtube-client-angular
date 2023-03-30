@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { SortType } from 'src/app/app.component';
+import { SortType } from 'src/app/services/search-sort.model';
+import { SortService } from 'src/app/services/search-sort.service';
+import { ShowListService } from 'src/app/services/show-list.service';
 import response from '../../services/loader';
 import { ItemType } from '../item.model';
 // import { RespType } from '../list-response.model';
@@ -14,8 +16,10 @@ export class ResultsListComponent {
   @Input() viewSort!: SortType;
   @Input() filterWord = '';
   results: ItemType[];
-  constructor() {
+  constructor(
+    public sortService: SortService,
+    public listShow: ShowListService
+  ) {
     this.results = response.items;
   }
-  sortDataIncrease = true;
 }

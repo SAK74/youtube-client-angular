@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { ShowListService } from 'src/app/services/show-list.service';
 
 @Component({
   selector: 'app-input-block',
@@ -6,8 +7,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-block.component.scss'],
 })
 export class InputBlockComponent {
-  @Output() onSubmit = new EventEmitter();
+  constructor(private showList: ShowListService) {}
   handleClick() {
-    this.onSubmit.emit();
+    this.showList.listShow();
   }
 }

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { SortType } from 'src/app/app.component';
+import { SortType } from 'src/app/services/search-sort.model';
 import { ItemType } from '../item.model';
 
 @Pipe({ name: 'byWord' })

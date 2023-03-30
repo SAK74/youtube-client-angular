@@ -24,6 +24,8 @@ import {
   FilterByWordPipe,
 } from './search-panel/results-list/filtering.pippe';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowListService } from './services/show-list.service';
+import { SortService } from './services/search-sort.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [SortService, ShowListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

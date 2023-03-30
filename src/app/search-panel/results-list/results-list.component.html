@@ -1,10 +1,10 @@
-<ul>
+<ul *ngIf="listShow.listShowed">
   <li
     *ngFor="
       let item of results
-        | byWord : filterWord
-        | byDate : dateSort
-        | byViews : viewSort
+        | byWord : sortService.filterValue
+        | byDate : sortService.dateSort
+        | byViews : sortService.viewSort
     "
   >
     <app-result-item [item]="item"></app-result-item>

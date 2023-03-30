@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { SortService } from 'src/app/services/search-sort.service';
 
 @Component({
   selector: 'app-filtering',
@@ -6,16 +7,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./filtering.component.scss'],
 })
 export class FilteringComponent {
-  @Output() dateFilter = new EventEmitter();
-  @Output() countFilter = new EventEmitter();
-  @Output() filterValueChange = new EventEmitter<string>();
+  constructor(private sortService: SortService) {}
   dateClick() {
-    this.dateFilter.emit();
+    this.sortService.dateSortChange();
   }
   countClick() {
-    this.countFilter.emit();
+    this.sortService.viewSortChange();
   }
   valueChange(value: string) {
-    this.filterValueChange.emit(value);
+    this.sortService.filterValSet(value);
   }
 }
