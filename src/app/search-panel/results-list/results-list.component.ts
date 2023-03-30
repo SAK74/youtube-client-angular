@@ -3,7 +3,7 @@ import { SortType } from 'src/app/services/search-sort.model';
 import { SortService } from 'src/app/services/search-sort.service';
 import { ShowListService } from 'src/app/services/show-list.service';
 import response from '../../services/loader';
-import { ItemType } from '../item.model';
+import { ItemType } from '../models/item.model';
 // import { RespType } from '../list-response.model';
 
 @Component({

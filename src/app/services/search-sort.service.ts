@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SortType } from './search-sort.model';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class SortService {
   dateSort: SortType = false;
   viewSort: SortType = false;
