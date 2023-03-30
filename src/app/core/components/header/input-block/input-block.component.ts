@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShowListService } from 'src/app/services/show-list.service';
+import { ShowListService } from 'src/app/youtube/services/show-list.service';
 
 @Component({
   selector: 'app-input-block',

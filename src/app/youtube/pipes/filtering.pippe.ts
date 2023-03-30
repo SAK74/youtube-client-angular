@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { SortType } from 'src/app/services/search-sort.model';
+// import { SortType } from 'src/app/services/search-sort.model';
 import { ItemType } from '../models/item.model';
+import { SortType } from '../services/search-sort.model';
 
 @Pipe({ name: 'byWord' })
 export class FilterByWordPipe implements PipeTransform {
@@ -16,7 +17,7 @@ export class FilterByWordPipe implements PipeTransform {
 }
 
 @Pipe({ name: 'byDate' })
-export class FilterByDate implements PipeTransform {
+export class FilterByDatePipe implements PipeTransform {
   transform(value: ItemType[], dir: SortType) {
     return !dir
       ? value
@@ -30,7 +31,7 @@ export class FilterByDate implements PipeTransform {
 }
 
 @Pipe({ name: 'byViews' })
-export class FilterByViews implements PipeTransform {
+export class FilterByViewsPipe implements PipeTransform {
   transform(value: ItemType[], dir: SortType) {
     return !dir
       ? value

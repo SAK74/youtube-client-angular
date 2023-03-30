@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SortService } from 'src/app/services/search-sort.service';
+import { SortService } from 'src/app/youtube/services/search-sort.service';
 
 @Component({
   selector: 'app-filtering',

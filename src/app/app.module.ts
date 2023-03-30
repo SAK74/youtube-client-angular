@@ -6,28 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
-import { ResultsListComponent } from './search-panel/results-list/results-list.component';
-import { ResultItemComponent } from './search-panel/result-item/result-item.component';
-import {
-  FilterByDate,
-  FilterByViews,
-  FilterByWordPipe,
-} from './search-panel/results-list/filtering.pippe';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
-import { FooterDirective } from './search-panel/result-item/footer.directive';
+import { YouTobeModule } from './youtube/youtube.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ResultsListComponent,
-    ResultItemComponent,
-    FooterDirective,
-    FilterByWordPipe,
-    FilterByDate,
-    FilterByViews,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,6 +20,7 @@ import { FooterDirective } from './search-panel/result-item/footer.directive';
     HttpClientModule,
     MaterialModule,
     CoreModule,
+    YouTobeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

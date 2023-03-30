@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ItemType } from '../models/item.model';
+import { ItemType } from '../../models/item.model';
 
 @Component({
   selector: 'app-result-item',
