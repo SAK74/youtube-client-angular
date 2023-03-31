@@ -9,9 +9,10 @@ import {
   FilterByViewsPipe,
   FilterByWordPipe,
 } from './pipes/filtering.pippe';
+import { You2BeRoutingModule } from './you2be-routing.module';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, You2BeRoutingModule],
   declarations: [
     ResultsListComponent,
     ResultItemComponent,
@@ -20,6 +21,6 @@ import {
     FilterByViewsPipe,
     FilterByWordPipe,
   ],
-  exports: [ResultsListComponent],
+  // exports: [ResultsListComponent],
 })
 export class YouTobeModule {}

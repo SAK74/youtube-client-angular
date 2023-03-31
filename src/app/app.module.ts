@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
-import { YouTobeModule } from './youtube/youtube.module';
+// import { YouTobeModule } from './youtube/youtube.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +20,7 @@ import { YouTobeModule } from './youtube/youtube.module';
     HttpClientModule,
     MaterialModule,
     CoreModule,
-    YouTobeModule,
+    // YouTobeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
