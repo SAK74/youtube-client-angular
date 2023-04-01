@@ -8,9 +8,16 @@ import { HeaderComponent } from './components/header/header/header.component';
 import { InputBlockComponent } from './components/header/input-block/input-block.component';
 import { SettingsComponent } from './components/header/settings/settings.component';
 import { UserBlockComponent } from './components/header/user-block/user-block.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    FormsModule,
+    RouterModule,
+    MatMenuModule,
+  ],
   declarations: [
     UserBlockComponent,
     HeaderComponent,

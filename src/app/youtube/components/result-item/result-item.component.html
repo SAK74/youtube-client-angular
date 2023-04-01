@@ -21,7 +21,9 @@
     <mat-card-title>{{ item.snippet.title }}</mat-card-title>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">more...</button>
+    <button mat-raised-button color="primary" (click)="goToDetail()">
+      more...
+    </button>
   </mat-card-actions>
   <mat-card-footer [setFooter]="item.snippet.publishedAt"></mat-card-footer>
 </mat-card>
