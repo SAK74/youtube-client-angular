@@ -4,7 +4,9 @@ import { Directive, Input, ElementRef, OnInit } from '@angular/core';
 export class FooterDirective implements OnInit {
   color = 'transparent';
   @Input() setFooter!: string;
-  constructor(private el: ElementRef<HTMLElement>) {}
+  constructor(private el: ElementRef<HTMLElement>) {
+    el.nativeElement.style.height = '5px';
+  }
   ngOnInit(): void {
     const dayNow = new Date('2019-10-30').getTime();
     const publishDate = new Date(this.setFooter).getTime();

@@ -1,2 +1,38 @@
-<p>Detailed component</p>
-<p>{{ item | json }}</p>
+<div class="image-container">
+  <img matCardImage [src]="item?.snippet?.thumbnails?.high?.url" alt="" />
+  <a class="back-button" routerLink="/youtube">
+    <mat-icon>arrow_back_ios</mat-icon>
+  </a>
+</div>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ item?.snippet?.title }} </mat-card-title>
+    <mat-card-subtitle>{{
+      (item?.snippet)!.publishedAt | date : "fullDate"
+    }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="desc-title">Description:</div>
+    <div class="desc-content">{{ item?.snippet?.description }}</div>
+    <div class="statistics">
+      <span>
+        <mat-icon>remove_red_eye</mat-icon>
+        <span>{{ item?.statistics?.viewCount }}</span>
+      </span>
+      <span
+        ><mat-icon>favorite</mat-icon>
+        <span>{{ item?.statistics?.likeCount }}</span></span
+      >
+      <span
+        ><mat-icon>heart_broken</mat-icon>
+        <span>{{ item?.statistics?.dislikeCount }}</span></span
+      >
+      <span
+        ><mat-icon>library_books</mat-icon>
+        <span>{{ item?.statistics?.commentCount }}</span></span
+      >
+    </div>
+  </mat-card-content>
+  <mat-card-footer [setFooter]="(item?.snippet)!.publishedAt"></mat-card-footer>
+</mat-card>

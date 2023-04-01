@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailedComponent } from './pages/detailed-page/datailed.component';
+import { DetailedComponent } from './pages/detailed-page/detailed.component';
 import { ResultsListComponent } from './pages/results-list/results-list.component';
 
 const routes: Routes = [
@@ -16,5 +16,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class You2BeRoutingModule {}

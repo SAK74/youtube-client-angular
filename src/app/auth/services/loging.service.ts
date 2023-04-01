@@ -7,8 +7,10 @@ const initialName = 'Your Name';
 
 @Injectable({ providedIn: 'root' })
 export class LoginService {
-  constructor(private router: Router) {}
-  isLogged = false;
+  constructor(private router: Router) {
+    this.isLogged = Boolean(window.localStorage.getItem(STORAGEKEY));
+  }
+  isLogged: boolean;
   user = initialName;
   logIn(user: string) {
     window.localStorage.setItem(STORAGEKEY, fakeToken);

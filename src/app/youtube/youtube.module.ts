@@ -10,7 +10,7 @@ import {
   FilterByWordPipe,
 } from './pipes/filtering.pippe';
 import { You2BeRoutingModule } from './you2be-routing.module';
-import { DetailedComponent } from './pages/detailed-page/datailed.component';
+import { DetailedComponent } from './pages/detailed-page/detailed.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, You2BeRoutingModule],
