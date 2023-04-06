@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material.module';
 import { FilteringComponent } from './components/header/filtering/filtering.component';
@@ -17,6 +17,7 @@ import { MatMenuModule } from '@angular/material/menu';
     FormsModule,
     RouterModule,
     MatMenuModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     UserBlockComponent,

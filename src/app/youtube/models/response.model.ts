@@ -1,11 +1,11 @@
 import { ItemType } from './item.model';
 
-export interface RespType {
+export interface RespType<T> {
   kind: string;
   etag: string;
   pageInfo: {
     totalResults: number;
     resultsPerPage: number;
   };
-  items: ItemType[];
+  items: T[];
 }

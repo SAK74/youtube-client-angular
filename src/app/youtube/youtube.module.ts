@@ -11,9 +11,15 @@ import {
 } from './pipes/filtering.pippe';
 import { You2BeRoutingModule } from './you2be-routing.module';
 import { DetailedComponent } from './pages/detailed-page/detailed.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, You2BeRoutingModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    You2BeRoutingModule,
+    HttpClientModule,
+  ],
   declarations: [
     ResultsListComponent,
     ResultItemComponent,

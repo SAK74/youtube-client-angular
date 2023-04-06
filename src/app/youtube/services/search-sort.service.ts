@@ -16,6 +16,6 @@ export class SortService {
   }
 
   viewSortChange() {
-    this.dateSort = this.dateSort === 'dec' ? 'inc' : 'dec';
+    this.viewSort = this.viewSort === 'dec' ? 'inc' : 'dec';
   }
 }

@@ -4,6 +4,8 @@
       mat-card-lg-image
       [src]="item.snippet.thumbnails.default.url"
       alt="item-image"
+      (click)="goToDetail()"
+      [style.cursor]="'pointer'"
     />
   </mat-card-header>
 
