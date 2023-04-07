@@ -4,8 +4,11 @@
     <mat-icon svgIcon="user-icon"></mat-icon>
   </button>
   <mat-menu #userMenu>
-    <div mat-menu-item (click)="onLogOut()" [disabled]="!logService.isLogged">
-      Logout
+    <div *ngIf="!isLogged; else logout" mat-menu-item (click)="onLoginClick()">
+      Log In
     </div>
+    <ng-template #logout>
+      <div mat-menu-item (click)="onLogOut()">Log Out</div>
+    </ng-template>
   </mat-menu>
 </div>
