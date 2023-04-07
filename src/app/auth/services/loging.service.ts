@@ -11,8 +11,10 @@ export class LoginService {
   constructor(private router: Router) {
     this.isLogged = Boolean(window.localStorage.getItem(STORAGEKEY));
     this.loggedObserver.next(this.isLogged);
+    this.isAdmin = false;
   }
   isLogged: boolean;
+  isAdmin: boolean;
   user = initialName;
   loggedObserver = new Subject<boolean>();
   logIn(user: string) {
