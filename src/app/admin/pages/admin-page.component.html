@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header
+    ><mat-card-title>Create new card</mat-card-title></mat-card-header
+  >
+
+  <mat-card-content>
+    <form [formGroup]="cardForm" (submit)="onSubmit()">
+      <mat-form-field>
+        <mat-label> Title: </mat-label>
+        <input type="text" matInput formControlName="title" />
+        <mat-error>{{ getErrorMessage("title") }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Description: </mat-label>
+        <textarea matInput formControlName="description"></textarea>
+        <mat-error>{{ getErrorMessage("description") }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Img: </mat-label>
+        <input type="text" matInput formControlName="img" />
+        <mat-error>{{ getErrorMessage("img") }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Link video: </mat-label>
+        <input type="text" matInput formControlName="video" />
+        <mat-error>{{ getErrorMessage("video") }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Created date: </mat-label>
+        <input
+          matInput
+          formControlName="createdDate"
+          [matDatepicker]="picker"
+        />
+        <mat-datepicker-toggle
+          [for]="picker"
+          matIconSuffix
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error>{{ getErrorMessage("createdDate") }}</mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="cardForm.invalid"
+        class="submit-button"
+      >
+        Create card
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

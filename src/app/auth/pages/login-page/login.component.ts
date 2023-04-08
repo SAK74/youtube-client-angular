@@ -9,16 +9,16 @@ import {
 import { UserLoginType } from '../../models/user-login';
 import { LoginService } from '../../services/loging.service';
 
-type FormType = Record<keyof UserLoginType, FormControl<string>>;
+type FormType = { [K in keyof UserLoginType]: FormControl<UserLoginType[K]> };
 
 @Component({
   selector: 'login-component',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.scss', '../../../global-styles.scss'],
 })
 export class LoginComponent {
   constructor(private logService: LoginService) {}
-  loginForm = new FormGroup({
+  loginForm = new FormGroup<FormType>({
     login: new FormControl('', {
       validators: [Validators.required, Validators.email],
       nonNullable: true,

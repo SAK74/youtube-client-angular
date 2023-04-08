@@ -4,6 +4,10 @@
     <mat-icon svgIcon="user-icon"></mat-icon>
   </button>
   <mat-menu #userMenu>
+    <div mat-menu-item *ngIf="isLogged" (click)="onMain()">Main view page</div>
+    <div mat-menu-item (click)="onAdmin()" [disabled]="!logService.isAdmin">
+      Admin page
+    </div>
     <div *ngIf="!isLogged; else logout" mat-menu-item (click)="onLoginClick()">
       Log In
     </div>

@@ -5,7 +5,7 @@ import { ItemType } from '../../models/item.model';
 @Component({
   selector: 'app-result-item',
   templateUrl: './result-item.component.html',
-  styleUrls: ['./result-item.component.scss'],
+  styleUrls: ['./result-item.component.scss', '../../../global-styles.scss'],
 })
 export class ResultItemComponent implements OnInit {
   @Input() item!: ItemType;

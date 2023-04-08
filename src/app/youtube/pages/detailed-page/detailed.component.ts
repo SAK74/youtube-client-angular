@@ -7,17 +7,13 @@ import { RequestService } from '../../services/http-service';
 @Component({
   selector: '<detailed-component>',
   templateUrl: './detailed.component.html',
-  styleUrls: ['detailed.component.scss'],
+  styleUrls: ['detailed.component.scss', '../../../global-styles.scss'],
   providers: [RequestService],
 })
 export class DetailedComponent {
   item: ItemType | null = null;
   constructor(private route: ActivatedRoute, private request: RequestService) {
     route.params.subscribe(({ itemId }) => {
-      // let item: ItemType | undefined;
-      // if ((item = loader.items.find((item) => item.id === itemId))) {
-      //   this.item = item;
-      // }
       request.getVideo(itemId).subscribe(({ items }) => (this.item = items[0]));
     });
   }

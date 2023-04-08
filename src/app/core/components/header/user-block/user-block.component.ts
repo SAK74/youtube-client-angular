@@ -30,8 +30,15 @@ export class UserBlockComponent {
   isLogged: boolean;
   onLogOut() {
     this.logService.logOut();
+    this.router.navigateByUrl('auth');
   }
   onLoginClick() {
     this.router.navigateByUrl('auth');
+  }
+  onAdmin() {
+    this.router.navigateByUrl('admin');
+  }
+  onMain() {
+    this.router.navigateByUrl('youtube');
   }
 }
