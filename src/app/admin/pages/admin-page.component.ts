@@ -7,6 +7,9 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { addCardAction } from 'src/app/redux/actions/custom-cards.actions';
+import { StoreType } from 'src/app/redux/state.models';
 import { NewCardType } from '../models';
 
 type CardFormType = FormGroup<{
@@ -19,7 +22,7 @@ type CardFormType = FormGroup<{
   styleUrls: ['./admin-page.component.scss', '../../global-styles.scss'],
 })
 export class AdminPageComponent {
-  constructor(private fBuilder: FormBuilder) {}
+  constructor(private fBuilder: FormBuilder, private store: Store<StoreType>) {}
   cardForm: CardFormType = this.fBuilder.nonNullable.group({
     title: [
       '',
@@ -51,7 +54,8 @@ export class AdminPageComponent {
     if (this.cardForm.invalid) {
       return;
     } else {
-      console.log(this.cardForm.value);
+      // console.log(this.cardForm.value);
+      this.store.dispatch(addCardAction(this.cardForm.value as NewCardType));
     }
   }
 

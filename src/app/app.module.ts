@@ -7,9 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
-// import { YouTobeModule } from './youtube/youtube.module';
+
+import { ReduxModule } from './redux/redux.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,9 +18,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    // MaterialModule,
     CoreModule,
-    // YouTobeModule,
+    ReduxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
