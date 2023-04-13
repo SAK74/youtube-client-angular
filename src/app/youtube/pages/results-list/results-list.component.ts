@@ -11,7 +11,7 @@ import { StoringService } from '../../services/storing-list.service';
   selector: 'app-results-list',
   templateUrl: './results-list.component.html',
   styleUrls: ['./results-list.component.scss'],
-  providers: [StoringService],
+  // providers: [StoringService],
 })
 export class ResultsListComponent implements OnDestroy {
   results: ItemType[] = [];

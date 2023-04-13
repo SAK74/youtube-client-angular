@@ -14,6 +14,7 @@ import { DetailedComponent } from './pages/detailed-page/detailed.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProviders } from './services/interceptors';
 import { RequestService } from './services/http-service';
+import { StoringService } from './services/storing-list.service';
 
 @NgModule({
   imports: [
@@ -31,6 +32,6 @@ import { RequestService } from './services/http-service';
     FilterByWordPipe,
     DetailedComponent,
   ],
-  providers: [interceptorProviders, RequestService],
+  providers: [interceptorProviders, RequestService, StoringService],
 })
 export class YouTobeModule {}

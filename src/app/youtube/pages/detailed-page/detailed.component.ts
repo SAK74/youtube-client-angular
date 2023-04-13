@@ -1,20 +1,32 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
+// import { selectItem } from 'src/app/redux/selectors/select-item.selector';
+import { StoreType } from 'src/app/redux/state.models';
 import { ItemType } from '../../models/item.model';
-import { RequestService } from '../../services/http-service';
-// import loader from '../../services/loader';
+import { first, mergeMap } from 'rxjs';
 
 @Component({
   selector: '<detailed-component>',
   templateUrl: './detailed.component.html',
   styleUrls: ['detailed.component.scss', '../../../global-styles.scss'],
-  providers: [RequestService],
 })
 export class DetailedComponent {
-  item: ItemType | null = null;
-  constructor(private route: ActivatedRoute, private request: RequestService) {
-    route.params.subscribe(({ itemId }) => {
-      request.getVideo(itemId).subscribe(({ items }) => (this.item = items[0]));
-    });
+  item?: ItemType;
+  constructor(private route: ActivatedRoute, private store: Store<StoreType>) {
+    route.params
+      .pipe(
+        mergeMap(({ itemId }) =>
+          store
+            // .select(selectItem, { id: itemId })
+            .select((state) =>
+              state.you2BeCards.find((item) => item.id === itemId)
+            )
+        ),
+        first()
+      )
+      .subscribe((item) => {
+        this.item = item;
+      });
   }
 }

@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
-import { addYou2BeCardAction } from 'src/app/redux/actions/you2Be.actions';
+import {
+  addYou2BeCardAction,
+  resetCards,
+} from 'src/app/redux/actions/you2Be.actions';
 import { StoreType } from 'src/app/redux/state.models';
 import { RequestService } from './http-service';
 import { SearchService } from '../../core/services/input-observer.service';
@@ -14,11 +17,11 @@ export class StoringService {
     private store: Store<StoreType>
   ) {
     observer.$inputObserver.subscribe((text) => {
-      this.getItems(text);
+      this.setItems(text);
     });
   }
-
-  getItems(search: string) {
+  setItems(search: string) {
+    this.store.dispatch(resetCards());
     this.request
       .searchList(search)
       .pipe(map((res) => res.items))

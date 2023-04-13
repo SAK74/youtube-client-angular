@@ -5,3 +5,5 @@ export const addYou2BeCardAction = createAction(
   '[YOU2BE_cards] add_card',
   props<ItemType>()
 );
+
+export const resetCards = createAction('[YOU2BE_cards] reset_cards');
