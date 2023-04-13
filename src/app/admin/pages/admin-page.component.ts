@@ -56,6 +56,8 @@ export class AdminPageComponent {
     } else {
       // console.log(this.cardForm.value);
       this.store.dispatch(addCardAction(this.cardForm.value as NewCardType));
+      alert('Card has been created!');
+      this.cardForm.reset();
     }
   }
 
