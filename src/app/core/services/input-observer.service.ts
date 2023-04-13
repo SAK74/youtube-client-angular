@@ -3,6 +3,5 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class SearchService {
-  $inputObserver: Observable<string> | null = null;
-  searchText = '';
+  $inputObserver!: Observable<string>;
 }

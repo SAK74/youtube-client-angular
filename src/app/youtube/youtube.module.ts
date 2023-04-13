@@ -13,6 +13,7 @@ import { You2BeRoutingModule } from './you2be-routing.module';
 import { DetailedComponent } from './pages/detailed-page/detailed.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProviders } from './services/interceptors';
+import { RequestService } from './services/http-service';
 
 @NgModule({
   imports: [
@@ -30,6 +31,6 @@ import { interceptorProviders } from './services/interceptors';
     FilterByWordPipe,
     DetailedComponent,
   ],
-  providers: [interceptorProviders],
+  providers: [interceptorProviders, RequestService],
 })
 export class YouTobeModule {}
