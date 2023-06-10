@@ -1,0 +1,12 @@
+<ul>
+  <li
+    *ngFor="
+      let item of results
+        | byWord : sortService.filterValue
+        | byDate : sortService.dateSort
+        | byViews : sortService.viewSort
+    "
+  >
+    <app-result-item [item]="item"></app-result-item>
+  </li>
+</ul>

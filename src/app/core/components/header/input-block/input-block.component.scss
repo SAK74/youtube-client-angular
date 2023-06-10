@@ -1,0 +1,12 @@
+input {
+  background: #e5e5e5;
+  width: 396px;
+}
+
+:host {
+  height: 24px;
+}
+
+.mat-mdc-raised-button {
+  height: inherit;
+}

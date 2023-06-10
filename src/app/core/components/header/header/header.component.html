@@ -1,0 +1,11 @@
+<header>
+  <div class="main-row">
+    <img src="../../../assets/png/logo.png" alt="logo" />
+    <app-input-block></app-input-block>
+    <app-settings (onClick)="setClick()"></app-settings>
+
+    <app-user-block></app-user-block>
+  </div>
+
+  <app-filtering *ngIf="showFilter"></app-filtering>
+</header>
