@@ -1,0 +1,12 @@
+<header>
+  <div class="main-row">
+    <img src="../../../assets/png/logo.png" alt="logo" />
+    <app-input-block></app-input-block>
+    <app-settings (onClick)="setClick()"></app-settings>
+
+    <app-user-block></app-user-block>
+  </div>
+  <!-- <a routerLink="auth">Authorization</a>
+  <a routerLink="youtube">You tu be</a> -->
+  <app-filtering *ngIf="showFilter"></app-filtering>
+</header>

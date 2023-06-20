@@ -1,0 +1,32 @@
+mat-card {
+  width: 250px;
+  background: #e5e5e5;
+}
+
+mat-card-header {
+  img {
+    width: 100%;
+  }
+}
+
+mat-card-actions {
+  justify-content: center;
+}
+
+mat-card-title {
+  text-align: end;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+mat-card-content {
+  text-align: center;
+  height: 120px;
+  .statistics {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 1rem;
+  }
+}

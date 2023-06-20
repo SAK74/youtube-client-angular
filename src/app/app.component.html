@@ -1,12 +1,2 @@
-<app-header
-  (searchSubmit)="handleSearchSubmit()"
-  (dateSearch)="dateSortClick()"
-  (countSearch)="viewSortClick()"
-  (filterVal)="filterValChange($event)"
-></app-header>
-<app-results-list
-  *ngIf="showSearch"
-  [dateSort]="dateSort"
-  [viewSort]="viewSort"
-  [filterWord]="filterValue"
-></app-results-list>
+<app-header></app-header>
+<router-outlet></router-outlet>

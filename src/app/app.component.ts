@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import response from './services/loader';
-
-export type SortType = false | 'inc' | 'dec';
 
 @Component({
   selector: 'app-root',
@@ -9,26 +6,6 @@ export type SortType = false | 'inc' | 'dec';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'youtube-client-app';
-  showSearch = false;
-  constructor() {
-    // console.log(response);
-    // data=from(data)
-    // this.data.subscribe(console.log);
-  }
-  handleSearchSubmit() {
-    this.showSearch = true;
-  }
-  dateSort: SortType = false;
-  dateSortClick() {
-    this.dateSort = this.dateSort === 'dec' ? 'inc' : 'dec';
-  }
-  viewSort: SortType = false;
-  viewSortClick() {
-    this.viewSort = this.viewSort === 'dec' ? 'inc' : 'dec';
-  }
-  filterValue = '';
-  filterValChange(val: string) {
-    this.filterValue = val;
-  }
+  // title = 'youtube-client-app';
+  constructor() {}
 }

@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-header>
+    <img
+      mat-card-lg-image
+      [src]="item.snippet.thumbnails.default.url"
+      alt="item-image"
+    />
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="statistics">
+      <mat-icon>remove_red_eye</mat-icon>
+      <span>{{ item.statistics.viewCount }}</span>
+      <mat-icon>favorite</mat-icon>
+      <span>{{ item.statistics.likeCount }}</span>
+      <mat-icon>heart_broken</mat-icon>
+      <span>{{ item.statistics.dislikeCount }}</span>
+      <mat-icon>library_books</mat-icon>
+      <span>{{ item.statistics.commentCount }}</span>
+    </div>
+    <mat-card-title>{{ item.snippet.title }}</mat-card-title>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="goToDetail()">
+      more...
+    </button>
+  </mat-card-actions>
+  <mat-card-footer [setFooter]="item.snippet.publishedAt"></mat-card-footer>
+</mat-card>
